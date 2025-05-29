@@ -1,0 +1,54 @@
+{
+  "name": "markdown-bullet-extension",
+  "displayName": "Markdown Bullet Helper",
+  "description": "Quickly add bullet points to selected text in Markdown with a right-click.",
+  "version": "1.0.0",
+  "publisher": "aryan-prakhar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AryanPrakhar/markdown-bullets"},
+  "author": "Aryan Prakhar",
+  "license": "MIT",
+  "icon": "logo.png",
+  "keywords": ["markdown", "bullet", "formatting", "productivity", "writing"],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Formatters", "Other"],
+  "galleryBanner": {
+    "color": "#007ACC",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-bullet-extension.addBulletPoints",
+        "title": "Add Bullet Points",
+        "icon": "$(list-unordered)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection && resourceExtname == .md",
+          "command": "markdown-bullet-extension.addBulletPoints",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
