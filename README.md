@@ -2,6 +2,8 @@
 
 A simple and efficient VS Code extension that adds bullet points to selected text in Markdown files with just a right-click.
 
+## 🔗 [Install here on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=aryan-prakhar.markdown-bullet-extension&ssr=false#review-details)
+
 ## ✨ Features
 
 - **Quick bullet formatting**: Select text and right-click to instantly add bullet points
